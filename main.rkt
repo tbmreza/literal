@@ -14,5 +14,7 @@
     (with-syntax ([str (port->string in)])
       (strip-context
        #'(module anything racket
+           (provide status)
+	   (define status "pkg update ok")
            (provide data)
            (define data 'str))))))
